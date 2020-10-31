@@ -1,12 +1,5 @@
 import _ from "lodash";
 
-export const omitByKey = (data, iterator) =>
-  _.mapValues(_.groupBy(data, iterator), clist =>
-    clist.map(item => _.omit(item, iterator))
-  );
-
-export const groupByKey = (data, iterator) => _.groupBy(data, iterator);
-
 const nest = (seq, keys) => {
   if (!keys.length) return seq;
   var first = keys[0];
